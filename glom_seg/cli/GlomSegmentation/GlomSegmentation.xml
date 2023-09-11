@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executable>
+  <category>Frozen Glom Segmentation</category>
+  <title>Frozen glom Segmentation</title>
+  <description>For segmenting NonGS and GS Glomorulus</description>
+  <version>0.1.0</version>
+  <documentation-url>https://digitalslidearchive.github.io/HistomicsTK/</documentation-url>
+  <license>Apache 2.0</license>
+  <contributor>Praveen Kumar Dande (UFL)</contributor>
+  <acknowledgements>This work is part of efforts in digital pathology by the Sarder Lab: UFL.</acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters.</description>
+    <image>
+      <name>input_files</name>
+      <label>Input Image/pattern</label>
+      <description>input filename </description>
+      <channel>input</channel>
+      <index>0</index>
+    </image>
+    <directory>
+      <name>base_dir</name>
+      <label>Base Directory</label>
+      <description>Base Directory for the image</description>
+      <channel>input</channel>
+      <index>1</index>
+    </directory>
+    <file>
+      <name>non_gs_model</name>
+      <label>Non GS model</label>
+      <description>Non GS model</description>
+      <channel>input</channel>
+      <index>2</index>
+    </file>
+    <file>
+      <name>gs_model</name>
+      <label>GS model</label>
+      <description>GS model</description>
+      <channel>input</channel>
+      <index>3</index>
+    </file>
+  </parameters>
+  <parameters advanced="true">
+    <label>Girder API URL and Key</label>
+    <description>A Girder API URL and token for Girder client</description>
+    <string>
+      <name>girderApiUrl</name>
+      <longflag>api-url</longflag>
+      <label>Girder API URL</label>
+      <description>A Girder API URL (e.g., https://girder.example.com:443/api/v1)</description>
+      <default></default>
+    </string>
+    <string>
+      <name>girderToken</name>
+      <longflag>token</longflag>
+      <label>Girder API Token</label>
+      <description>A Girder token</description>
+      <default></default>
+    </string>
+  </parameters>
+</executable>
